@@ -3,13 +3,13 @@ package com.techelevator;
 import java.math.BigDecimal;
 
 public class space {
-    private Integer id;
+    private int id;
     private Integer venue_id;
     private String name;
     private Boolean Is_accessible;
-    private Integer open_from;
-    private Integer open_to;
-    private java.math.BigDecimal daily_rate;
+    private int open_from;
+    private int open_to;
+    private BigDecimal daily_rate;
     private Integer max_occupancy;
 
     public Integer getId() {
@@ -27,18 +27,29 @@ public class space {
         return Is_accessible;
     }
 
-    public Integer getOpen_from() {
+
+    public int getOpen_from() {
         return open_from;
     }
 
-    public Integer getOpen_to() {
+    public int getOpen_to() {
         return open_to;
+    }
+
+    public void setOpen_from(int open_from) {
+        this.open_from = open_from;
+    }
+
+    public void setOpen_to(int open_to) {
+        this.open_to = open_to;
     }
 
     public BigDecimal getDaily_rate() {
         return daily_rate;
     }
-
+    public void setDaily_rate(BigDecimal daily_rate) {
+        this.daily_rate = daily_rate;
+    }
     public Integer getMax_occupancy() {
         return max_occupancy;
     }
@@ -59,19 +70,9 @@ public class space {
         Is_accessible = is_accessible;
     }
 
-    public void setOpen_from(Integer open_from) {
-        this.open_from = open_from;
-    }
-
-    public void setOpen_to(Integer open_to) {
-        this.open_to = open_to;
-    }
-
-    public void setDaily_rate(BigDecimal daily_rate) {
-        this.daily_rate = daily_rate;
-    }
-
     public void setMax_occupancy(Integer max_occupancy) {
         this.max_occupancy = max_occupancy;
     }
+
+
 }

@@ -1,10 +1,22 @@
 package com.techelevator;
 
+import java.util.List;
+
 public class venue {
-    private Integer id;
+    private int id;
     private String name;
-    private Integer city_id;
+    private int city_id;
     private String description;
+    private List<String> categoryList;
+    public Venue (){
+        this.categoryList;
+    }
+    public List<String> getCategoryList() {
+        return categoryList;
+    }
+    public void setCategoryList(List<String> categoryList) {
+        this.categoryList = categoryList;
+    }
 
     public Integer getId() {
         return id;
@@ -36,4 +48,5 @@ public class venue {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
