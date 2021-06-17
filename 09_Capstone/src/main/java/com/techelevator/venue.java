@@ -8,8 +8,7 @@ public class venue {
     private int city_id;
     private String description;
     private List<String> categoryList;
-    public Venue (){
-        this.categoryList;
+    public venue (){ this.categoryList;
     }
     public List<String> getCategoryList() {
         return categoryList;
