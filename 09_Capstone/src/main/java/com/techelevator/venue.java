@@ -2,13 +2,13 @@ package com.techelevator;
 
 import java.util.List;
 
-public class venue {
+public class Venue {
     private int id;
     private String name;
     private int city_id;
     private String description;
     private List<String> categoryList;
-    public venue (){ this.categoryList;
+    public Venue(){
     }
     public List<String> getCategoryList() {
         return categoryList;

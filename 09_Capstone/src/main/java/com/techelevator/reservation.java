@@ -3,13 +3,16 @@ package com.techelevator;
 import java.sql.Date;
 import java.time.LocalDate;
 
-public class reservation {
+public class Reservation {
     private int reservation_id;
     private int space_id;
     private int number_of_attendees;
     private LocalDate start_date;
     private LocalDate end_date;
     private String reserved_for;
+
+    public Reservation(int space_id, int numberOfAttendees, LocalDate from_date, LocalDate to_date, String reservedFor) {
+    }
 
     public Integer getReservation_id() {
         return reservation_id;
@@ -59,4 +62,9 @@ public class reservation {
     public void setReserved_for(String reserved_for) {
         this.reserved_for = reserved_for;
     }
+
+    public void setReservationId(int reservation_id) {
+    }
+
+
 }

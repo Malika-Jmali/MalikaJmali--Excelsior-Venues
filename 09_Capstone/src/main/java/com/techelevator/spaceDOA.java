@@ -1,8 +1,8 @@
 package com.techelevator;
 import java.util.List;
-import com.techelevator.space;
-public interface spaceDOA {
-    public List<space> getSpaceForSelectedVenue(int venue_id);
 
+public interface SpaceDOA {
+    public List<Space> getSpaceForSelectedVenue(int venue_id);
+    public List<Space> getAvailableSpaces(int venue_id);
 
 }

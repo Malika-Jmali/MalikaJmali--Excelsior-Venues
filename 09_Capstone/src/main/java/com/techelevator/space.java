@@ -2,7 +2,7 @@ package com.techelevator;
 
 import java.math.BigDecimal;
 
-public class space {
+public class Space {
     private int id;
     private Integer venue_id;
     private String name;
