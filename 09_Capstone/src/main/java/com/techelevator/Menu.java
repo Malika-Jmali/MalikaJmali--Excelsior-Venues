@@ -39,10 +39,11 @@ public class Menu {
     }
 
     public String printSubMenu2(List<Venue> results) {
-        for (Venue v : results) {
-            System.out.println(v.getName());
-            System.out.println(v.getDescription());
-        }
+        System.out.println(results.get(0).getName());
+        System.out.println("Location :"+ results.get(0).getCity_name()+", "+results.get(0).getState());
+        System.out.println("Categories :"+ results.get(0).getCategoryList() +"\n\n");
+        System.out.println(results.get(0).getDescription());
+
         System.out.println("\n*******************************************");
         System.out.println("What would you like to do next?");
         System.out.println("(1) View Spaces");

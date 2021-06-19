@@ -36,7 +36,7 @@ public class JdbcVenueDAO implements VenueDOA {
 
     @Override
     public List<Venue> getVenueDetails(int venue_id) {
-        String getVenueDetailsSql = "SELECT distinct category.name, venue.name, venue.description, abbreviation, city.name\n" +
+        String getVenueDetailsSql = "SELECT distinct category.name as category, venue.name, venue.description , abbreviation, city.name as city, city.state_abbreviation as state\n" +
                 "FROM venue\n" +
                 "JOIN city on venue.city_id = city.id\n" +
                 "JOIN state on city.state_abbreviation = state.abbreviation\n" +
@@ -47,9 +47,12 @@ public class JdbcVenueDAO implements VenueDOA {
                 "where venue.id = ?";
         SqlRowSet results = jdbcTemplate.queryForRowSet(getVenueDetailsSql, venue_id);
         List<Venue> venues = new ArrayList<>();
+        List<String> categoryList = new ArrayList<>();
+
         while (results.next()) {
-            Venue venue = mapRowToVenueAll1
-                    (results);
+            Venue venue = mapRowToVenueAll(results);
+            categoryList.add(results.getString("category"));
+            venue.setCategoryList(categoryList);
             venues.add(venue);
         }
         return venues;
@@ -65,7 +68,8 @@ public class JdbcVenueDAO implements VenueDOA {
         Venue venue = new Venue();
         venue.setName(results.getString("name"));
         venue.setDescription(results.getString("description"));
-
+        venue.setCity_name(results.getString("city"));
+        venue.setState(results.getString("state"));
         return venue;
 
     }
