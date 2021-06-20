@@ -7,39 +7,42 @@ public class Reservation {
     private int reservation_id;
     private int space_id;
     private int number_of_attendees;
-    private LocalDate start_date;
-    private LocalDate end_date;
+    private String start_date;
+    private String end_date;
     private String reserved_for;
 
-    public Reservation(int space_id, int numberOfAttendees, LocalDate from_date, LocalDate to_date, String reservedFor) {
+    public Reservation(int space_id, int numberOfAttendees, String from_date, String to_date, String reservedFor) {
+        this.space_id = space_id;
+        this.number_of_attendees = numberOfAttendees;
+        this.start_date = from_date;
+        this.end_date = to_date;
+        this.reserved_for = reservedFor;
     }
-
-    public Integer getReservation_id() {
+    public Reservation() {
+    }
+    public int getReservation_id() {
         return reservation_id;
     }
-    public void setReservation_id(Integer reservation_id) {
-        this.reservation_id = reservation_id;
-    }
-    public Integer getSpace_id() {
+    public int getSpace_id() {
         return space_id;
     }
-    public void setSpace_id(Integer space_id) {
+    public void setSpace_id(int space_id) {
         this.space_id = space_id;
     }
 
-    public Integer getNumber_of_attendees() {
+    public int getNumber_of_attendees() {
         return number_of_attendees;
     }
 
-    public void setNumber_of_attendees(Integer number_of_attendees) {
+    public void setNumber_of_attendees(int number_of_attendees) {
         this.number_of_attendees = number_of_attendees;
     }
 
-    public LocalDate getStart_date() {
+    public String getStart_date() {
         return start_date;
     }
 
-    public LocalDate getEnd_date() {
+    public String getEnd_date() {
         return end_date;
     }
 
@@ -47,11 +50,11 @@ public class Reservation {
         this.reservation_id = reservation_id;
     }
 
-    public void setStart_date(LocalDate start_date) {
+    public void setStart_date(String start_date) {
         this.start_date = start_date;
     }
 
-    public void setEnd_date(LocalDate end_date) {
+    public void setEnd_date(String end_date) {
         this.end_date = end_date;
     }
 

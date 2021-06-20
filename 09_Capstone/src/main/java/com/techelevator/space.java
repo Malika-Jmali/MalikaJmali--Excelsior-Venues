@@ -4,18 +4,18 @@ import java.math.BigDecimal;
 
 public class Space {
     private int id;
-    private Integer venue_id;
+    private int venue_id;
     private String name;
     private Boolean Is_accessible;
     private int open_from;
     private int open_to;
-    private BigDecimal daily_rate;
-    private Integer max_occupancy;
+    private double daily_rate;
+    private int max_occupancy;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
-    public Integer getVenue_id() {
+    public int getVenue_id() {
         return venue_id;
     }
 
@@ -44,21 +44,21 @@ public class Space {
         this.open_to = open_to;
     }
 
-    public BigDecimal getDaily_rate() {
+    public double getDaily_rate() {
         return daily_rate;
     }
-    public void setDaily_rate(BigDecimal daily_rate) {
+    public void setDaily_rate(double daily_rate) {
         this.daily_rate = daily_rate;
     }
-    public Integer getMax_occupancy() {
+    public int getMax_occupancy() {
         return max_occupancy;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setVenue_id(Integer venue_id) {
+    public void setVenue_id(int venue_id) {
         this.venue_id = venue_id;
     }
 
@@ -70,7 +70,7 @@ public class Space {
         Is_accessible = is_accessible;
     }
 
-    public void setMax_occupancy(Integer max_occupancy) {
+    public void setMax_occupancy(int max_occupancy) {
         this.max_occupancy = max_occupancy;
     }
 
